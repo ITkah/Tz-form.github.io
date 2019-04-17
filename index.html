@@ -25,9 +25,9 @@
 							<label>Тип заявки <span>*</span></label>
 						</div>
 						<div class="request-sizes-input">
-							<select id="inputState" class="selectDeal">
-								<option>Обмен</option>
-								<option>...</option>
+							<select id="inputDeal" class="selectDeal" required>
+								<option value="">Обмен</option>
+								<option value="1">...</option>
 							</select>
 						</div>
 					</div>
@@ -47,16 +47,16 @@
 						<div class="request-sizes-input">
 							<div class="checked-container">
 								<div class="checked-box">
-									<input type="radio" class="checked-room" checked name="Room"/>
+									<input type="radio" id="quantityFloor" class="checked-room" checked name="Room"/>
 								</div>
 								<div class="checked-box">
-									<input type="radio" class="checked-room" checked name="Room"/>
+									<input type="radio" id="quantityFloor" class="checked-room" checked name="Room"/>
 								</div>
 								<div class="checked-box">
-									<input type="radio" class="checked-room" checked name="Room"/>
+									<input type="radio" id="quantityFloor" class="checked-room" checked name="Room"/>
 								</div>
 								<div class="checked-box">
-									<input type="radio" class="checked-room active-floor" checked name="Room"/>
+									<input type="radio" id="quantityFloor" class="checked-room" checked name="Room"/>
 								</div>
 							</div>
 						</div>
@@ -68,10 +68,10 @@
 						<div class="request-sizes-input">
 							<div class="number-container">
 								<div class="number-box">
-									<input type="number" class="squared-input" placeholder="От">
+									<input type="number" id="sizeRoom-1" class="squared-input" placeholder="От">
 								</div>
 								<div class="number-box">
-									<input type="number" class="squared-input" placeholder="До">
+									<input type="number" id="sizeRoom-2" class="squared-input" placeholder="До">
 								</div>
 							</div>
 						</div>
@@ -83,15 +83,15 @@
 						<div class="request-sizes-input">
 							<div class="buget-container">
 								<div class="buget-box">
-									<input type="number" class="squared-input" placeholder="От">
+									<input type="number" id="bugetMoney-1" class="squared-input" placeholder="От" required>
 								</div>
 								<div class="buget-box">
-									<input type="number" class="squared-input" placeholder="До">
+									<input type="number" id="bugetMoney-2" class="squared-input" placeholder="До" required>
 								</div>
 								<div class="buget-box-value">
-									<select id="inputState" class="buget-value">
-										<option>USD</option>
-										<option>...</option>
+									<select id="bugetValue" class="buget-value" required>
+										<option value="">USD</option>
+										<option value="1">...</option>
 									</select>
 								</div>
 							</div>
@@ -104,15 +104,15 @@
 						<div class="request-sizes-input">
 							<div class="floor-container">
 								<div class="floor-box">
-									<input type="number" class="floor-input" placeholder="От">
+									<input type="number" id="floorNum" class="floor-input" placeholder="От">
 								</div>
 								<div class="floor-container-check">
 									<div class="flox-box-check">
-										<input type="checkbox" name="not-first-floor">
+										<input type="checkbox" id="notLastFloor" name="not-first-floor">
 										<label for="not-first-floor">Не первый</label>
 									</div>
 									<div class="flox-box-check">
-										<input type="checkbox" name="not-last-floor">
+										<input type="checkbox" id="notFirstFloor" name="not-last-floor">
 										<label for="not-last-floor">Не последний</label>
 									</div>
 								</div>
@@ -135,7 +135,7 @@
 							<label>Область <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="region" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="request-location-group">
@@ -143,7 +143,7 @@
 							<label>Район <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="area" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="request-location-group">
@@ -151,7 +151,7 @@
 							<label>Населёный пункт <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="city" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="request-location-group">
@@ -159,7 +159,7 @@
 							<label>Административный район <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="adminArea" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="request-location-group">
@@ -167,7 +167,7 @@
 							<label>Микрорайон <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="minArea" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="client-form">
@@ -181,7 +181,7 @@
 							<label>Имя <span>*</span></label>
 						</div>
 						<div class="request-location-input">
-							<input type="text" class="locationWrite">
+							<input type="text" id="nameUser" class="locationWrite" required>
 						</div>
 					</div>
 					<div class="request-location-group">
@@ -189,7 +189,7 @@
 							<label>Телефон <span>*</span></label>
 						</div>
 						<div class="request-location-input search-num">
-							<input type="text" class="locationWrite">
+							<input type="text" id="numPhone" class="locationWrite" required>
 							<span></span>
 						</div>
 					</div>
@@ -206,5 +206,7 @@
 
 </div>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>	
