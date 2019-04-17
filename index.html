@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<link rel="icon" href="img/it.ico">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper" id="wrapper">
+	<header class="header" id="header"></header>
+	
+	<main class="main" id="main">
+		<div class="create-request">
+			<div class="create-request-title">
+				<h3>Создание новой заявки</h3>
+			</div>
+			<form action="" method="POST" class="request-container">
+				<div class="request-sizes">
+					<div class="request-sizes-group">
+						<div class="request-sizes-label">
+							<label>Тип заявки <span>*</span></label>
+						</div>
+						<div class="request-sizes-input">
+							<select id="inputState" class="selectDeal">
+								<option>Обмен</option>
+								<option>...</option>
+							</select>
+						</div>
+					</div>
+					<div class="request-sizes-info">
+						<div class="request-sizes-label-info">
+							<label>Условия обмена</label>
+						</div>
+						<div class="request-sizes-warning">
+							<p>Необходимо купить квартиру в центральной части <br>
+							города, желательно в новом ЖК. Готовы на обмен</p>
+						</div>
+					</div>
+					<div class="request-sizes-group">
+						<div class="request-sizes-label">
+							<label>Количество комнат</label>
+						</div>
+						<div class="request-sizes-input">
+							<div class="checked-container">
+								<div class="checked-box">
+									<label class="button-room">1</label>
+									<input type="radio" class="checked-room" checked name="Room"/>
+								</div>
+								<div class="checked-box">
+									<label class="button-room">2</label>
+									<input type="radio" class="checked-room" checked name="Room"/>
+								</div>
+								<div class="checked-box">
+									<label class="button-room">3</label>
+									<input type="radio" class="checked-room" checked name="Room"/>
+								</div>
+								<div class="checked-box">
+									<label class="button-room">4+</label>
+									<input type="radio" class="checked-room" checked name="Room"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request-sizes-group">
+						<div class="request-sizes-label">
+							<label>Площадь (общая),м<sup>2</sup></label>
+						</div>
+						<div class="request-sizes-input">
+							<div class="number-container">
+								<div class="number-box">
+									<input type="number" class="squared-input" placeholder="От">
+								</div>
+								<div class="number-box">
+									<input type="number" class="squared-input" placeholder="До">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request-sizes-group">
+						<div class="request-sizes-label">
+							<label>Бюджет <span>*</span></label>
+						</div>
+						<div class="request-sizes-input">
+							<div class="buget-container">
+								<div class="buget-box">
+									<input type="number" class="squared-input" placeholder="От">
+								</div>
+								<div class="buget-box">
+									<input type="number" class="squared-input" placeholder="До">
+								</div>
+								<div class="buget-box-value">
+									<select id="inputState" class="buget-value">
+										<option>USD</option>
+										<option>...</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request-sizes-group">
+						<div class="request-sizes-label">
+							<label>Этаж:</label>
+						</div>
+						<div class="request-sizes-input">
+							<div class="floor-container">
+								<div class="floor-box">
+									<input type="number" class="floor-input" placeholder="От">
+								</div>
+								<div class="floor-container-check">
+									<div class="flox-box-check">
+										<input type="checkbox" name="not-first-floor">
+										<label for="not-first-floor">Не первый</label>
+									</div>
+									<div class="flox-box-check">
+										<input type="checkbox" name="not-last-floor">
+										<label for="not-last-floor">Не последний</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request-sizes-info">
+						<div class="request-sizes-label-info">
+							<label>Дополнительная информация</label>
+						</div>
+						<div class="request-sizes-warning">
+							<p>Необходимо купить квартиру в центральной части <br>
+							города, желательно в новом ЖК. Готовы на обмен</p>
+						</div>
+					</div>
+				</div>
+				<div class="request-location">
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Область <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Район <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Населёный пункт <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Административный район <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Микрорайон <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="client-form">
+						<div class="client-form-title">
+							<h3>Клиент</h3>
+							<span>+</span>
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Имя <span>*</span></label>
+						</div>
+						<div class="request-location-input">
+							<input type="text" class="locationWrite">
+						</div>
+					</div>
+					<div class="request-location-group">
+						<div class="request-location-label">
+							<label>Телефон <span>*</span></label>
+						</div>
+						<div class="request-location-input search-num">
+							<input type="text" class="locationWrite">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="form-button">
+					<button type="submit" class="button-save">Сохранить</button>
+					<button class="button-cancellation">Отмена</button>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<footer class="footer" id="footer"></footer>
+
+</div>
+
+<script src="js/js.js"></script>
+</body>
+</html>	
