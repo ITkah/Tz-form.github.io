@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $(".checked-box").on("click", ".checked-room", function(){
-        $(".checked-box .checked-room").removeClass("active");
+    $(".checked-box").on("click", function(){
+        $(".checked-box").removeClass("active");
         $(this).addClass("active");
     });
 });
